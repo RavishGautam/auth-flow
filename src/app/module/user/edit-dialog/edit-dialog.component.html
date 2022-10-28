@@ -1,0 +1,41 @@
+<div class="dialog-content">
+  <h1 mat-dialog-title style="display: flex; justify-content: center; background-color: blueviolet; color: whitesmoke;">Edit Emplyoee Data</h1>
+  <mat-dialog-content >
+          <form [formGroup]="editForm" (ngSubmit)="onSaveChange()">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>First Name</mat-label>
+              <input type="text" matInput autocomplete="on" 
+              formControlName="firstName"/>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Last Name</mat-label>
+              <input type="text" matInput autocomplete="on" 
+              formControlName='lastName'/>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input type="email" matInput autocomplete="on" 
+              formControlName='email'/>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Mobile Number</mat-label>
+              <input type="number" matInput autocomplete="on" 
+              formControlName='mobile'/>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput autocomplete="on" 
+              formControlName='password'/>
+            </mat-form-field>
+          </form>
+    
+  </mat-dialog-content>
+
+  <div mat-dialog-actions align="end">
+    <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+    <button  mat-raised-button color="primary" type="submit" (click)="onSaveChange()" >save</button>
+  </div >
+</div>
+

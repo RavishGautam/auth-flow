@@ -1,0 +1,14 @@
+router guard
+deeplink
+
+enrollment based 
+
+auth view
+  switch -> signin with forgotpassowrd
+  switch -> signin with new user - enter phone || email - OTP => enter OTP => auth success
+update user detail
+  age 43
+  address1/2
+
+
+recommenadtion based on user age

@@ -1,0 +1,54 @@
+
+<div>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>User Registration</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="registrationForm" (ngSubmit)="signUp()">
+          <div class="errmsg" *ngIf="errP" style="color: red;">{{errMsg}}</div>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>First Name</mat-label>
+                <input type="text" matInput 
+                formControlName="firstName"
+                autocomplete="on">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Last Name</mat-label>
+                <input type="text" matInput 
+                formControlName="lastName"
+                autocomplete="on">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput 
+                formControlName="email"
+                autocomplete="on">
+              </mat-form-field>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Mobile Number</mat-label>
+                <input type="number" matInput 
+                formControlName="mobile"
+                autocomplete="on">
+              </mat-form-field>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput 
+                formControlName="password"
+                autocomplete="on">
+              </mat-form-field>
+
+              <button  type="submit" mat-raised-button color="accent">Add</button>
+
+              <br />
+              <br />
+              <span>
+                If You already have a account yet please
+                <a routerLink="../login">LOGIN HERE</a></span
+              >
+        </form>
+      </mat-card-content>
+    </mat-card>
+</div>
